@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 // Styling
 import { ProductWrapper } from "../styles";
 
-const ProductItem = ({ product, deleteProduct }) => {
+const ProductItem = (props) => {
+  const product = props.product;
+  const setProduct = props.setProduct;
+
   return (
     <ProductWrapper>
       <Link to={`/products/${product.slug}`}>
@@ -12,7 +15,7 @@ const ProductItem = ({ product, deleteProduct }) => {
       </Link>
       <p>{product.name}</p>
       <p className="product-price">{product.price} KD</p>
-      <DeleteButton productId={product.id} deleteProduct={deleteProduct} />
+      <DeleteButton productId={product.id}  />
     </ProductWrapper>
   );
 };

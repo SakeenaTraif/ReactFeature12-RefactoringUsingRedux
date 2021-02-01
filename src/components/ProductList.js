@@ -1,3 +1,6 @@
+//redux
+import {useSelector} from "react-redux";
+
 // Styling
 import { ListWrapper } from "../styles";
 // Components
@@ -5,7 +8,11 @@ import ProductItem from "./ProductItem";
 import SearchBar from "./SearchBar";
 import { useState } from "react";
 
-const ProductList = ({ products, deleteProduct }) => {
+const ProductList = () => {
+  const products = useSelector((state) => state.products);
+
+
+// const ProductList = ({ products, deleteProduct }) => {
   const [query, setQuery] = useState("");
 
   const productList = products
@@ -16,7 +23,6 @@ const ProductList = ({ products, deleteProduct }) => {
       <ProductItem
         product={product}
         key={product.id}
-        deleteProduct={deleteProduct}
       />
     ));
 

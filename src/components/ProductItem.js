@@ -1,8 +1,10 @@
-// Components
-import DeleteButton from "./buttons/DeleteButton";
+//react
 import { Link } from "react-router-dom";
 // Styling
 import { ProductWrapper } from "../styles";
+// Components
+import DeleteButton from "./buttons/DeleteButton";
+import UpdateButton from "./buttons/UpdateButton";
 
 const ProductItem = (props) => {
   const product = props.product;
@@ -16,6 +18,7 @@ const ProductItem = (props) => {
       <p>{product.name}</p>
       <p className="product-price">{product.price} KD</p>
       <DeleteButton productId={product.id}  />
+      <UpdateButton slug={product.slug}/>
     </ProductWrapper>
   );
 };

@@ -19,9 +19,26 @@ export const ProductWrapper = styled.div`
     }
   }
 `;
+export const Form = styled.form`
+ margin:auto;
+ width:50%;
 
+`;
 export const DeleteButtonStyled = styled.p`
   color: ${(props) => props.theme.red};
+
+`;
+
+export const EditButtonStyled = styled.p`
+  color: brown;
+  display:block;
+`;
+
+export const AddButtonStyled = styled.p`
+  color: ${(props) => props.theme.green};
+  text-align:center;
+  size:2em;
+
 `;
 
 export const Description = styled.h4`
